@@ -16,6 +16,7 @@ $(function() {
 		"/nick",
 		"/notice",
 		"/op",
+		"/otr",
 		"/part",
 		"/query",
 		"/quit",
