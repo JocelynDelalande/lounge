@@ -29,7 +29,10 @@ module.exports = function(irc, network) {
 		}
 
 		var self = data.to.toLowerCase() === irc.me.toLowerCase();
-		var chan = _.find(network.channels, {name: self ? data.from : data.to});
+		var chan = _.find(network.channels, {
+			name: network.getMessageChanName(data)
+		});
+
 		if (typeof chan === "undefined") {
 			return;
 		}
