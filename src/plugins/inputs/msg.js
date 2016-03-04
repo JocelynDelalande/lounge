@@ -8,6 +8,7 @@ module.exports = function(network, chan, cmd, args) {
 	if (args.length === 0 || args[0] === "") {
 		return;
 	}
+	var client = this;
 	var irc = network.irc;
 	var target = "";
 	if (cmd === "msg") {
